@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package controlversiones_nombreapellido;
+import java.util.Scanner;
 
 /**
  *
@@ -10,11 +11,27 @@ package controlversiones_nombreapellido;
  */
 public class ControlVersiones_NombreApellido {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner sc = new Scanner(System.in);
+        System.out.println("=== Cálculo de Promedio ===");
+        
+        System.out.print("Ingrese la primera nota: ");
+        double n1 = sc.nextDouble();
+        
+        System.out.print("Ingrese la segunda nota: ");
+        double n2 = sc.nextDouble();
+        
+        System.out.print("Ingrese la tercera nota: ");
+        double n3 = sc.nextDouble();
+        
+        double promedio = (n1 + n2 + n3) / 3;
+        System.out.println("El promedio es: " + promedio);
+        
+        if (promedio >= 60) {
+        System.out.println("Estado: Aprobado");
+        } else {
+        System.out.println("Estado: Reprobado");
+        }
     }
     
 }
